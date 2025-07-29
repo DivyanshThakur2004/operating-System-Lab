@@ -16,14 +16,13 @@ int main()
             printf("My PID is %d\n", getpid());
             printf("My Parent PID is %d\n", getppid());
             return 0;
-        } else {
-
         }
+        else{
+        printf("Hello from Child %d\n",i);
+        printf("A (in child) is %d\n",a);
+        printf("My Patrent PID is %d\n",getppid());
+  
     }
-
-    printf("Parent process is done with forking.\n");
-
-    while(wait(NULL) > 0);
-
-    return 0;
+}
+return 0;
 }
