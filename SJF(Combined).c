@@ -6,6 +6,7 @@ typedef struct program {
 
 int main() {
     int n, choice;
+    printf("NAME: Divyansh Thakur | SECTION: C | ROLL NUMBER: 25\n");
     printf("Enter Number of Processes: ");
     scanf("%d", &n);
     pr arr[n];
@@ -102,7 +103,6 @@ int main() {
         printf("Invalid choice\n");
         return 1;
     }
-
     printf("\nProcess\tAT\tBT\tCT\tTAT\tWT\n");
     for (int i = 0; i < n; i++) {
         printf("P%d\t%d\t%d\t%d\t%d\t%d\n", arr[i].num, arr[i].at, arr[i].bt, arr[i].ct, arr[i].tat, arr[i].wt);
