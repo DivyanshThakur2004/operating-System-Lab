@@ -103,11 +103,20 @@ int main() {
         printf("Invalid choice\n");
         return 1;
     }
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j].bt < arr[i].bt) {
+                pr temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+
     printf("\nProcess\tAT\tBT\tCT\tTAT\tWT\n");
     for (int i = 0; i < n; i++) {
         printf("P%d\t%d\t%d\t%d\t%d\t%d\n", arr[i].num, arr[i].at, arr[i].bt, arr[i].ct, arr[i].tat, arr[i].wt);
     }
-
     printf("\nAverage Waiting Time: %.2f", total_wt / n);
     printf("\nAverage Turn Around Time: %.2f\n", total_tat / n);
 
