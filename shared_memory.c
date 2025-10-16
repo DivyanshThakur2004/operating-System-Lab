@@ -17,7 +17,7 @@ int main() {
     printf("\t\tOUTPUT\n");
     printf("Name: Divyansh Thakur\t\tRoll no.: 25\n");
     
-    key = ftok("shmfile", 65);
+    key = ftok(".", 65);
     printf("Unique key created using ftok: %d\n", key);
     
     shmid = shmget(key, SHM_SIZE, IPC_CREAT | 0666);
